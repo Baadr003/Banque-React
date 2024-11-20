@@ -48,8 +48,7 @@ public class CompteController {
                     return ResponseEntity.ok().body(updatedCompte);
                 }).orElse(ResponseEntity.notFound().build());
     }
-
-    // DELETE: Supprimer un compte
+  // DELETE: Supprimer un compte
     @DeleteMapping("/comptes/{id}")
     public ResponseEntity<Void> deleteCompte(@PathVariable Long id) {
         return compteRepository.findById(id)
